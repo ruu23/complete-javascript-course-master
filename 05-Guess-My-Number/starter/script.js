@@ -4,11 +4,12 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
-const displayMessage = finction (message) =
-document.querySelector('.message').textContent = message
+const displayMessage = message =>
+  (document.querySelector('.message').textContent = message);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
+  console.log(guess);
 
   // conditions of guess values
   if (!guess) {
